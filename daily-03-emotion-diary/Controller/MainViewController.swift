@@ -162,63 +162,54 @@ class MainViewController: UIViewController {
     // 1.이겼다 버튼
     @IBAction func emotionButton1Clicked(_ sender: UIButton) {
         emotionCount[0] += 1
-        print("이겼다",emotionCount[0])
         emotionCount1.text = String(emotionCount[0])
     }
     
     // 2.전원출루 버튼
     @IBAction func emotionButton2Clicked(_ sender: UIButton) {
         emotionCount[1] += 1
-        print("전원출루", emotionCount[1])
         emotionCount2.text = String(emotionCount[1])
     }
     
     // 3.홈런 버튼
     @IBAction func emotionButton3Clicked(_ sender: UIButton) {
         emotionCount[2] += 1
-        print("홈런", emotionCount[2])
         emotionCount3.text = String(emotionCount[2])
     }
     
     // 4.끝내기패 버튼
     @IBAction func emotionButton4Clicked(_ sender: UIButton) {
         emotionCount[3] += 1
-        print("홈런", emotionCount[3])
         emotionCount4.text = String(emotionCount[3])
     }
     
     // 5.실책 버튼
     @IBAction func emotionButton5Clicked(_ sender: UIButton) {
         emotionCount[4] += 1
-        print("실책", emotionCount[4])
         emotionCount5.text = String(emotionCount[4])
     }
     
     // 6.무승부 버튼
     @IBAction func emotionButton6Clicked(_ sender: UIButton) {
         emotionCount[5] += 1
-        print("무승부", emotionCount[5])
         emotionCount6.text = String(emotionCount[5])
     }
     
     // 7.우천취소 버튼
     @IBAction func emotionButton7Clicked(_ sender: UIButton) {
         emotionCount[6] += 1
-        print("우천취소", emotionCount[6])
         emotionCount7.text = String(emotionCount[6])
     }
     
     // 8.연패 버튼
     @IBAction func emotionButton8Clicked(_ sender: UIButton) {
         emotionCount[7] += 1
-        print("연패", emotionCount[7])
         emotionCount8.text = String(emotionCount[7])
     }
     
     // 9.시즌종료 버튼
     @IBAction func emotionButton9Clicked(_ sender: UIButton) {
         emotionCount[8] += 1
-        print("시즌종료", emotionCount[8])
-        emotionCount8.text = String(emotionCount[8])
+        emotionCount9.text = String(emotionCount[8])
     }
 }
