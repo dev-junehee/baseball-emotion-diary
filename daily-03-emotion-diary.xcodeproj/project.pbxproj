@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4DFA4082BFB641700FE3A5C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4E0FC9F2BF73F5200D1EE1E /* daily-03-emotion-diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "daily-03-emotion-diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0FCA22BF73F5200D1EE1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E0FCA42BF73F5200D1EE1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		C4E0FC962BF73F5200D1EE1E = {
 			isa = PBXGroup;
 			children = (
+				C4DFA4082BFB641700FE3A5C /* README.md */,
 				C4E0FCA12BF73F5200D1EE1E /* daily-03-emotion-diary */,
 				C4E0FCA02BF73F5200D1EE1E /* Products */,
 			);
