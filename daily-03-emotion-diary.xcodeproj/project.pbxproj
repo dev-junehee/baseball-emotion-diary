@@ -58,24 +58,16 @@
 		C4E0FCA12BF73F5200D1EE1E /* daily-03-emotion-diary */ = {
 			isa = PBXGroup;
 			children = (
-				C4E0FCB62BF73FE000D1EE1E /* Controller */,
 				C4E0FCA22BF73F5200D1EE1E /* AppDelegate.swift */,
 				C4E0FCA42BF73F5200D1EE1E /* SceneDelegate.swift */,
 				C4E0FCA62BF73F5200D1EE1E /* ViewController.swift */,
+				C4E0FCB92BF742B800D1EE1E /* MainViewController.swift */,
 				C4E0FCA82BF73F5200D1EE1E /* Main.storyboard */,
 				C4E0FCAB2BF73F5300D1EE1E /* Assets.xcassets */,
 				C4E0FCAD2BF73F5300D1EE1E /* LaunchScreen.storyboard */,
 				C4E0FCB02BF73F5300D1EE1E /* Info.plist */,
 			);
 			path = "daily-03-emotion-diary";
-			sourceTree = "<group>";
-		};
-		C4E0FCB62BF73FE000D1EE1E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C4E0FCB92BF742B800D1EE1E /* MainViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
