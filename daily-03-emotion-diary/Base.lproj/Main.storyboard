@@ -38,7 +38,7 @@
                                                             <color key="titleColor" name="AccentColor"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="emotionButton1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1aG-Fv-3ad"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xjZ-D3-U9w"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-bZ-Xff">
@@ -72,7 +72,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gg-iM-DIk"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLO-cN-sam"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LhO-NB-tTp">
@@ -106,7 +106,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htX-zC-Eov"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkH-hB-3Cg"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-rp-w2v">
@@ -145,7 +145,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YfJ-Mq-fAZ"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRu-AO-6eV"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-su-PqT">
@@ -179,7 +179,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton5Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYM-lR-Ju3"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vc6-sO-1tr"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BjN-Uc-fiQ">
@@ -213,7 +213,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton6Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Hz-g5-IXV"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnU-QR-N47"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-XR-Llm">
@@ -252,7 +252,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton7Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQT-lR-ADR"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kca-Up-Qio"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-Ul-zn5">
@@ -286,7 +286,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton8Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xo-Rz-6b6"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="323-V5-nMb"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="44i-FI-cnv">
@@ -320,7 +320,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="emotionButton9Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4l2-ue-Rkh"/>
+                                                            <action selector="emotionButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JW6-XY-FMZ"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RXy-Kl-4Ow">

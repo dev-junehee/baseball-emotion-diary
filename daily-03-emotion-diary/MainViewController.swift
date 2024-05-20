@@ -73,143 +73,87 @@ class MainViewController: UIViewController {
         0, 0, 0,
     ]
     
+    // 버튼 디자인
+    func emotionButtonDesign(_ button: UIButton, buttonImg: UIImage, _ label: UILabel, labelText: String, _ count: UILabel, countInt: Int, tag: Int) {
+        button.setImage(buttonImg, for: .normal)
+        button.backgroundColor = .clear
+        button.tag = tag
+        label.text = labelText
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 14)
+        count.text = String(countInt)
+        count.textAlignment = .left
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuButton.image = UIImage(systemName: "list.dash")
         menuButton.tintColor = .black
         
-        // 감정 이미지 삽입
-        emotionButton1.setImage(emotionImages[0], for: .normal)
-        emotionButton2.setImage(emotionImages[1], for: .normal)
-        emotionButton3.setImage(emotionImages[2], for: .normal)
-        emotionButton4.setImage(emotionImages[3], for: .normal)
-        emotionButton5.setImage(emotionImages[4], for: .normal)
-        emotionButton6.setImage(emotionImages[5], for: .normal)
-        emotionButton7.setImage(emotionImages[6], for: .normal)
-        emotionButton8.setImage(emotionImages[7], for: .normal)
-        emotionButton9.setImage(emotionImages[8], for: .normal)
+        // 1.이겼다
+        emotionButtonDesign(emotionButton1, buttonImg: emotionImages[0]!, emotionLabel1, labelText: emotionTexts[0], emotionCount1, countInt: emotionCount[0], tag: 0)
         
-        // 감정 이미지 백그라운드 투명 처리
-        emotionButton1.backgroundColor = .clear
-        emotionButton2.backgroundColor = .clear
-        emotionButton3.backgroundColor = .clear
-        emotionButton4.backgroundColor = .clear
-        emotionButton5.backgroundColor = .clear
-        emotionButton6.backgroundColor = .clear
-        emotionButton7.backgroundColor = .clear
-        emotionButton8.backgroundColor = .clear
-        emotionButton9.backgroundColor = .clear
+        // 2.전원 출루
+        emotionButtonDesign(emotionButton2, buttonImg: emotionImages[1]!, emotionLabel2, labelText: emotionTexts[1], emotionCount2, countInt: emotionCount[1], tag: 1)
         
-        // 감정 텍스트 삽입
-        emotionLabel1.text = emotionTexts[0]
-        emotionLabel1.textAlignment = .center
-        emotionLabel1.font = UIFont.systemFont(ofSize: 14)
+        // 3.홈런
+        emotionButtonDesign(emotionButton3, buttonImg: emotionImages[2]!, emotionLabel3, labelText: emotionTexts[2], emotionCount3, countInt: emotionCount[2], tag: 2)
         
-        emotionLabel2.text = emotionTexts[1]
-        emotionLabel2.textAlignment = .center
-        emotionLabel2.font = UIFont.systemFont(ofSize: 14)
+        // 4.끝내기패
+        emotionButtonDesign(emotionButton4, buttonImg: emotionImages[3]!, emotionLabel4, labelText: emotionTexts[3], emotionCount4, countInt: emotionCount[3], tag: 3)
         
-        emotionLabel3.text = emotionTexts[2]
-        emotionLabel3.textAlignment = .center
-        emotionLabel3.font = UIFont.systemFont(ofSize: 14)
+        // 5.실책파티
+        emotionButtonDesign(emotionButton5, buttonImg: emotionImages[4]!, emotionLabel5, labelText: emotionTexts[4], emotionCount5, countInt: emotionCount[4], tag: 4)
         
-        emotionLabel4.text = emotionTexts[3]
-        emotionLabel4.textAlignment = .center
-        emotionLabel4.font = UIFont.systemFont(ofSize: 14)
+        // 6.무승부
+        emotionButtonDesign(emotionButton6, buttonImg: emotionImages[5]!, emotionLabel6, labelText: emotionTexts[5], emotionCount6, countInt: emotionCount[5], tag: 5)
         
-        emotionLabel5.text = emotionTexts[4]
-        emotionLabel5.textAlignment = .center
-        emotionLabel5.font = UIFont.systemFont(ofSize: 14)
+        // 7.우천취소
+        emotionButtonDesign(emotionButton7, buttonImg: emotionImages[6]!, emotionLabel7, labelText: emotionTexts[6], emotionCount7, countInt: emotionCount[6], tag: 6)
         
-        emotionLabel6.text = emotionTexts[5]
-        emotionLabel6.textAlignment = .center
-        emotionLabel6.font = UIFont.systemFont(ofSize: 14)
+        // 8.연패중
+        emotionButtonDesign(emotionButton8, buttonImg: emotionImages[7]!, emotionLabel8, labelText: emotionTexts[7], emotionCount8, countInt: emotionCount[7], tag: 7)
         
-        emotionLabel7.text = emotionTexts[6]
-        emotionLabel7.textAlignment = .center
-        emotionLabel7.font = UIFont.systemFont(ofSize: 14)
-        
-        emotionLabel8.text = emotionTexts[7]
-        emotionLabel8.textAlignment = .center
-        emotionLabel8.font = UIFont.systemFont(ofSize: 14)
-        
-        emotionLabel9.text = emotionTexts[8]
-        emotionLabel9.textAlignment = .center
-        emotionLabel9.font = UIFont.systemFont(ofSize: 14)
-        
-        // 감정 카운드 (임시)
-        emotionCount1.text = String(emotionCount[0])
-        emotionCount1.textAlignment = .left
-        emotionCount2.text = String(emotionCount[1])
-        emotionCount2.textAlignment = .left
-        emotionCount3.text = String(emotionCount[2])
-        emotionCount3.textAlignment = .left
-        emotionCount4.text = String(emotionCount[3])
-        emotionCount4.textAlignment = .left
-        emotionCount5.text = String(emotionCount[4])
-        emotionCount5.textAlignment = .left
-        emotionCount6.text = String(emotionCount[5])
-        emotionCount6.textAlignment = .left
-        emotionCount7.text = String(emotionCount[6])
-        emotionCount7.textAlignment = .left
-        emotionCount8.text = String(emotionCount[7])
-        emotionCount8.textAlignment = .left
-        emotionCount9.text = String(emotionCount[8])
-        emotionCount9.textAlignment = .left
-    }
-  
-    // 1.이겼다 버튼
-    @IBAction func emotionButton1Clicked(_ sender: UIButton) {
-        emotionCount[0] += 1
-        emotionCount1.text = String(emotionCount[0])
+        // 9.시즌종료
+        emotionButtonDesign(emotionButton9, buttonImg: emotionImages[8]!, emotionLabel9, labelText: emotionTexts[8], emotionCount9, countInt: emotionCount[8], tag: 8)
     }
     
-    // 2.전원출루 버튼
-    @IBAction func emotionButton2Clicked(_ sender: UIButton) {
-        emotionCount[1] += 1
-        emotionCount2.text = String(emotionCount[1])
-    }
-    
-    // 3.홈런 버튼
-    @IBAction func emotionButton3Clicked(_ sender: UIButton) {
-        emotionCount[2] += 1
-        emotionCount3.text = String(emotionCount[2])
-    }
-    
-    // 4.끝내기패 버튼
-    @IBAction func emotionButton4Clicked(_ sender: UIButton) {
-        emotionCount[3] += 1
-        emotionCount4.text = String(emotionCount[3])
-    }
-    
-    // 5.실책 버튼
-    @IBAction func emotionButton5Clicked(_ sender: UIButton) {
-        emotionCount[4] += 1
-        emotionCount5.text = String(emotionCount[4])
-    }
-    
-    // 6.무승부 버튼
-    @IBAction func emotionButton6Clicked(_ sender: UIButton) {
-        emotionCount[5] += 1
-        emotionCount6.text = String(emotionCount[5])
-    }
-    
-    // 7.우천취소 버튼
-    @IBAction func emotionButton7Clicked(_ sender: UIButton) {
-        emotionCount[6] += 1
-        emotionCount7.text = String(emotionCount[6])
-    }
-    
-    // 8.연패 버튼
-    @IBAction func emotionButton8Clicked(_ sender: UIButton) {
-        emotionCount[7] += 1
-        emotionCount8.text = String(emotionCount[7])
-    }
-    
-    // 9.시즌종료 버튼
-    @IBAction func emotionButton9Clicked(_ sender: UIButton) {
-        emotionCount[8] += 1
-        emotionCount9.text = String(emotionCount[8])
+    @IBAction func emotionButtonClicked(_ sender: UIButton) {
+        let tag = sender.tag
+        
+        emotionCount[tag] += 1
+        
+        switch (tag) {
+        case 0:
+            emotionCount1.text = String(emotionCount[0])
+            break
+        case 1:
+            emotionCount2.text = String(emotionCount[1])
+            break
+        case 2:
+            emotionCount3.text = String(emotionCount[2])
+            break
+        case 3:
+            emotionCount4.text = String(emotionCount[3])
+            break
+        case 4:
+            emotionCount5.text = String(emotionCount[4])
+            break
+        case 5:
+            emotionCount6.text = String(emotionCount[5])
+            break
+        case 6:
+            emotionCount7.text = String(emotionCount[6])
+            break
+        case 7:
+            emotionCount8.text = String(emotionCount[7])
+            break
+        case 8:
+            emotionCount9.text = String(emotionCount[8])
+            break
+        default:
+            print("오류발생")
+        }
     }
 }
