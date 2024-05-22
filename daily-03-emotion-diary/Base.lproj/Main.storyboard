@@ -357,6 +357,15 @@
                                     <constraint firstItem="elv-R6-bhw" firstAttribute="leading" secondItem="YnZ-em-MfP" secondAttribute="leading" id="xNd-SQ-sud"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE5-kr-KYY">
+                                <rect key="frame" x="159" y="680" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="removeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgM-kz-VUu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -403,6 +412,7 @@
                         <outlet property="emotionLabel8" destination="fDf-Nl-yo5" id="9lh-xK-ClU"/>
                         <outlet property="emotionLabel9" destination="lel-tm-BQd" id="jak-KI-Ksq"/>
                         <outlet property="menuButton" destination="s4o-Us-tu1" id="Pwo-Bm-97P"/>
+                        <outlet property="removeButton" destination="cE5-kr-KYY" id="v5u-SH-43l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

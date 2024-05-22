@@ -46,6 +46,9 @@ class MainViewController: UIViewController {
     @IBOutlet var emotionCount8: UILabel!
     @IBOutlet var emotionCount9: UILabel!
     
+    // 초기화 버튼
+    @IBOutlet var removeButton: UIButton!
+    
     // 감정 이미지
     let emotionImages = [
         UIImage(named: "slime1"),
@@ -73,7 +76,7 @@ class MainViewController: UIViewController {
         0, 0, 0,
     ]
     
-    // 버튼 디자인
+    // 감정 버튼 디자인
     func emotionButtonDesign(_ button: UIButton, buttonImg: UIImage, _ label: UILabel, labelText: String, _ count: UILabel, countInt: Int, tag: Int) {
         button.setImage(buttonImg, for: .normal)
         button.backgroundColor = .clear
@@ -85,17 +88,47 @@ class MainViewController: UIViewController {
         count.textAlignment = .left
     }
     
-    // 버튼 디자인
+    // 초기화 버튼 디자인
+    func removeButtonDesign() {
+        removeButton.setTitle("초기화", for: .normal)
+        removeButton.setTitleColor(.gray, for: .normal)
+        removeButton.setImage(UIImage(systemName: "trash.circle"), for: .normal)
+        removeButton.tintColor = .gray
+    }
+    
+    // 바 버튼 디자인
     func menuButtonDesign(_ button: UIBarButtonItem, systemName: String, tintColor: UIColor) {
         button.image = UIImage(systemName: systemName)
         button.tintColor = tintColor
     }
     
+    // 감정 카운트 저장
+    func saveEmotionData() {
+        UserDefaults.standard.set(emotionCount, forKey: "emotionCount")
+    }
+    
+    // 감정 카운트 초기화
+    func removeEmotionData() {
+        print("초기화 됐어용")
+        UserDefaults.standard.removeObject(forKey: "emotionCount")
+    }
+    
+    // Alert
+//    func openAlert() {
+//        
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let defaultData = UserDefaults.standard.array(forKey: "emotionCount") else { return }
+        print(defaultData)
+        
         // 메뉴 버튼
         menuButtonDesign(menuButton, systemName: "list.dash", tintColor: .black)
+        
+        // 초기화 버튼
+        removeButtonDesign()
         
         // 1.이겼다
         emotionButtonDesign(emotionButton1, buttonImg: emotionImages[0]!, emotionLabel1, labelText: emotionTexts[0], emotionCount1, countInt: emotionCount[0], tag: 0)
@@ -125,6 +158,7 @@ class MainViewController: UIViewController {
         emotionButtonDesign(emotionButton9, buttonImg: emotionImages[8]!, emotionLabel9, labelText: emotionTexts[8], emotionCount9, countInt: emotionCount[8], tag: 8)
     }
     
+    // 감정 버튼 클릭 핸들러
     @IBAction func emotionButtonClicked(_ sender: UIButton) {
         let tag = sender.tag
         
@@ -161,5 +195,12 @@ class MainViewController: UIViewController {
         default:
             print("오류발생")
         }
+        
+        saveEmotionData()
+    }
+    
+    // 초기화 버튼 클릭 핸들러
+    @IBAction func removeButtonClicked(_ sender: UIButton) {
+        removeEmotionData()
     }
 }
