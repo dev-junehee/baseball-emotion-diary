@@ -85,11 +85,17 @@ class MainViewController: UIViewController {
         count.textAlignment = .left
     }
     
+    // 버튼 디자인
+    func menuButtonDesign(_ button: UIBarButtonItem, systemName: String, tintColor: UIColor) {
+        button.image = UIImage(systemName: systemName)
+        button.tintColor = tintColor
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuButton.image = UIImage(systemName: "list.dash")
-        menuButton.tintColor = .black
+        // 메뉴 버튼
+        menuButtonDesign(menuButton, systemName: "list.dash", tintColor: .black)
         
         // 1.이겼다
         emotionButtonDesign(emotionButton1, buttonImg: emotionImages[0]!, emotionLabel1, labelText: emotionTexts[0], emotionCount1, countInt: emotionCount[0], tag: 0)
