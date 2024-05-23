@@ -70,10 +70,11 @@ class MainViewController: UIViewController {
     ]
     
     // 감정 카운트
-    var emotionCount: [Int] = [
+    let initCount = Array<Int>(repeating: 0, count: 9)
+    var emotionCount = [
         0, 0, 0,
         0, 0, 0,
-        0, 0, 0,
+        0, 0, 0
     ]
     
     // 감정 버튼 디자인
@@ -110,19 +111,27 @@ class MainViewController: UIViewController {
     // 감정 카운트 초기화
     func removeEmotionData() {
         print("초기화 됐어용")
-        UserDefaults.standard.removeObject(forKey: "emotionCount")
+        emotionCount = initCount
+        UserDefaults.standard.set(initCount, forKey: "emotionCount")
     }
+    
     
     // Alert
 //    func openAlert() {
-//        
+//
 //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let defaultData = UserDefaults.standard.array(forKey: "emotionCount") else { return }
-        print(defaultData)
+        
+        guard let defaultData = UserDefaults.standard.array(forKey: "emotionCount") as? [Int] else {
+            print("유저디폴트에서 못가져옴~!")
+            return
+        }
+        print(#function, "defaultData", defaultData)
+        emotionCount = defaultData
+        
         
         // 메뉴 버튼
         menuButtonDesign(menuButton, systemName: "list.dash", tintColor: .black)
@@ -195,12 +204,14 @@ class MainViewController: UIViewController {
         default:
             print("오류발생")
         }
-        
+        print("버튼클릭했을때", emotionCount)
         saveEmotionData()
     }
     
     // 초기화 버튼 클릭 핸들러
     @IBAction func removeButtonClicked(_ sender: UIButton) {
         removeEmotionData()
+        print("초기화했을때", emotionCount)
+        viewDidLoad()
     }
 }

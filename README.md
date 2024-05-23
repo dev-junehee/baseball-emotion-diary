@@ -24,17 +24,17 @@
 - [x] 반복되는 코드 함수화
 - [x] 반복되는 액션 하나로 묶기
 #### 24-05-22 (Tue)
-- [ ] UserDefaults에 감정 데이터 저장
-- [ ] UserDefaults 데이터 초기화
+- [x] UserDefaults에 감정 데이터 저장
+- [x] UserDefaults 데이터 초기화
 
 <br />
 
 ## 화면 구성
-### 런치 스크린
 
-<img width="400" src="https://github.com/dev-junehee/baseball-emotion-diary/assets/116873887/e49975d8-acaf-4a56-85a6-78cd9129c4ad" />
+| 런치 스크린 | 메인 화면 |
+|:--------:|:--------|
+| <img width="400" src="https://github.com/dev-junehee/baseball-emotion-diary/assets/116873887/e49975d8-acaf-4a56-85a6-78cd9129c4ad" /> | <img width="400" src="https://github.com/dev-junehee/baseball-emotion-diary/assets/116873887/67584580-94ff-4add-83f9-37daad4c323b" /> |
 
-### 메인 화면
 
-<img width="400" src="https://github.com/dev-junehee/baseball-emotion-diary/assets/116873887/67584580-94ff-4add-83f9-37daad4c323b" />
+
 
